@@ -1,4 +1,4 @@
-***** Database Specs ****
+**** Database Specs
 ```
 Guest=# create database train_system;
 CREATE DATABASE

@@ -4,7 +4,7 @@ class Train
     @name = attributes[:name]
     @time = attributes[:time]
     @city_id = attributes[:city_id]
-    @id = attributes[:id]
+    @id = attributes[:id].to_i
   end
 
   def self.all
@@ -36,5 +36,5 @@ class Train
       booleans.push(self.time == other_train.time)
       booleans.push(self.city_id == other_train.city_id)
     booleans.all?
-  end 
+  end
 end
