@@ -1,14 +1,10 @@
+***** Database Specs ****
 ```
 Guest=# create database train_system;
 CREATE DATABASE
-Guest=# c\ train_system;
-Invalid command \. Try \? for help.
 Guest-# \c train_system;
 You are now connected to database "train_system" as user "Guest".
 train_system-# create table trains (id serial primary key, name varchar, time timestamp, city_id int);
-ERROR:  syntax error at or near "c"
-LINE 1: c
-        ^
 train_system=# CREATE TABLE trains (id serial primary key, name varchar, time timestamp, city_id int);
 CREATE TABLE
 train_system=# CREATE TABLE city (id serial primary key, name varchar);
@@ -33,7 +29,6 @@ train_system=# SELECT * FROM trains;
 (0 rows)
 
 train_system=# CREATE DATABASE trains_test WITH TEMPLATE trains;
-ERROR:  template database "trains" does not exist
 train_system=# CREATE DATABASE train_system_test WITH TEMPLATE train_system;
 CREATE DATABASE
 train_system=# \l
